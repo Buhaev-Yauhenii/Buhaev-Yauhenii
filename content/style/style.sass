@@ -1,0 +1,710 @@
+/* VARIABLES */
+$main-text-color: #333
+$second-text-color: #555
+$main-background-color: #fdf2e9
+$brand-color: #e67e22    
+$hover-color: #cf711f
+$visited-link-color: #f3bf91
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap')
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+
+    
+
+body
+    font-family: 'Rubik', sans-serif
+    line-height: 1
+    font-weight: 500
+    color: $second-text-color
+
+
+/*******************************************/
+
+/*@@@@@@@@@@grid@@@@@@@@@@@@*/
+
+.container
+    max-width: 120rem
+    margin: 0 auto
+    padding: 0 3.2rem
+
+.grid
+    display: grid
+    row-gap: 8rem 
+    column-gap: 2rem
+    
+.grid--center-v
+    align-items: center
+    
+.grid--2-cols
+    grid-template-columns: repeat(2, 1fr)
+
+.grid--3-cols
+    grid-template-columns: repeat(3, 1fr)
+
+.grid--4-cols
+    grid-template-columns: repeat(4, 1fr)
+
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+/*Subheading$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+.subheading
+    font-size: 5rem
+    margin: 3rem 0
+    margin-bottom: 5rem
+    text-align: center
+
+.subheading-snap
+    display: block
+    font-weight: 400
+    font-size: 3rem
+    color: $brand-color
+    letter-spacing: 0.6px
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+
+
+
+.section-hero
+    background-color: $main-background-color
+    padding: 1.6rem 
+    border-bottom: 1px solid #eee
+
+.hero
+    display: grid
+    margin: 0 auto
+    grid-template-columns: repeat(2, 1fr) 
+    padding: 0 3rem
+    max-width: 130rem
+    align-items: center
+    grid-gap: 2rem
+    
+.heading-primary, .subheading
+    font-weight: 700
+    
+    color: $main-text-color
+    letter-spacing: -1px
+     
+
+.heading-primary
+    margin-bottom: 3.2rem
+    line-height: 1.05
+    font-size: 5.2rem
+    
+
+
+.hero-description
+    font-size: 2rem
+    line-height: 1.4
+    margin-bottom: 2.5rem 
+
+
+    
+
+.btn:link, .btn:visited
+    display: inline-block
+    background-color: $brand-color
+    font-size: 2rem
+    color: white
+    padding: 1.6rem 3.2rem
+    border-radius: 16px
+    text-decoration: none
+    
+    transition: 300ms
+
+
+
+.btn-full:link, .btn-full:visited
+    background-color: $brand-color
+
+
+.margin-right
+    margin-right: 1rem !important
+
+.btn-outline:link, .btn-outline:visited
+    background-color: $visited-link-color
+
+.btn-full:hover, .btn-full:active
+    transition: 300ms
+    background-color: $hover-color
+    transform: scale(1.05)
+    box-shadow: inset 1px 1px 10px $hover-color
+
+.btn-outline:hover, .btn-outline:active
+    transition: 300ms
+    transform: scale(1.05)
+    box-shadow: inset 1px 1px 10px $brand-color
+.hero-img
+    width: 100%
+
+
+.delivered-meals
+    display: flex
+    align-items: center
+    gap: 1.6rem
+    margin-top: 8rem
+
+.delivered-imgs
+    display: flex
+    
+     
+
+.delivered-imgs img
+    height: 6rem
+    width: 6rem
+    border-radius: 50%
+    margin-right: -1.5rem
+    border: 3px solid $main-background-color
+
+.delivered-imgs img:hover
+    transition: 400ms
+    transform: scale(1.2)
+
+.delivered-imgs img:last-child
+    margin: 0
+
+.delivered-text
+    font-size: 1.5rem
+    font-weight: 600
+
+
+.delivered-text span
+    color: $brand-color
+
+
+        
+    
+/**********header**********/
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: $main-background-color
+    /*wanted to be sticky later*/
+    height: 9.6rem
+    padding: 0 5.4rem
+
+.logo
+    height: 2rem
+
+.main-nav-list
+    display: flex
+    gap: 4rem
+    list-style: none 
+
+.main-nav-link:link, .main-nav-link:visited
+    display: block
+    text-decoration: none
+    color: $main-text-color
+    font-weight: 400
+    font-size: 1.8rem
+    padding: 1rem 1rem
+    border-radius: 15px
+    
+
+.main-nav-link:hover, .main-nav-link:active
+    transition: all 200ms
+    color: $second-text-color
+    background-color: $brand-color
+
+.main-nav-link.nav-cta:link, .main-nav-link.nav-cta:visited
+    padding: 1rem 1rem
+    border-radius: 15px
+    background-color: $brand-color
+
+.main-nav-link.nav-cta:hover, .main-nav-link.nav-cta:active
+    background-color: $visited-link-color
+
+@media screen and ( max-width: 900px )
+    .main-nav-list 
+        gap: 1rem
+    
+
+/*section HOW******$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+.step-img-box
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+
+.step-img-box:before, .step-img-box:after
+    content: ""
+    display: block
+    
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 50%
+
+.step-img-box:before
+    padding-bottom: 90%
+    width: 90%
+    background-color: $brand-color
+    z-index: -2
+
+
+.step-img-box:after
+    width: 70%
+    padding-bottom: 70%
+    background-color: $main-background-color
+    z-index: -1
+
+.section-how
+    padding: 10rem 0
+    
+
+.step-img
+    width: 50%
+    
+
+.step-number
+
+    font-weight: bold
+    font-size: 8rem
+    color: #555
+    margin-bottom: 5rem
+
+.heading-tertiary
+    font-size: 4rem
+    font-weight: bold
+    letter-spacing: -1px
+    line-height: 1.2
+
+.step-text
+    margin-top: 2rem
+    font-size: 2.5rem
+    line-height: 1.2
+    letter-spacing: 1.2px
+
+
+    /* featured section*/
+.subheading-featured
+    margin: 0
+    padding: 2rem
+    text-align: center
+    font-size: 5rem
+.featured
+    margin: 0
+    background-color: #fef9f4
+    border-bottom: 1px solid #eee
+
+.featured-flex
+    margin: 0 auto
+    max-width: 80%
+    display: flex
+    gap: 2rem
+    
+    justify-content: space-around
+    align-items: center
+
+.featured img
+    padding: 2rem 0
+    height: 7rem
+    filter: brightness(0)
+    opacity: 0.5
+    
+    
+.meal
+    background-color: $main-background-color
+    font-size: 3rem
+    line-height: 2
+    transition: 400ms
+    border-radius: 15px
+    
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2)
+    
+.meal:hover
+    transform: rotate(-2deg)
+.meal-1:hover
+    transform: rotate(2deg)
+.section-meals
+    padding: 9rem 0
+
+.meal-img
+    width: 100%
+
+
+
+.meal-title
+    padding-left: 1rem
+    margin-bottom: 1rem
+    font-size: 3rem
+    color: #333
+    font-weight: 700
+
+.diet-title
+    line-height: 2
+
+.meal-attributes
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    list-style: none
+    margin-left: 1rem
+
+
+.meal-attribute
+    font-size: 2rem
+
+.icon
+    margin-right: 1rem
+
+.list ul
+    display: flex
+    flex-direction: column
+    gap: 2rem
+    list-style: none
+    font-size: 2.2rem
+     
+
+.list ul li
+    display: flex
+    margin-left: 2rem
+    gap: 1rem
+    align-items: center
+    font-size: 1.5rem
+    color: #555
+
+.list ul ion-icon
+    color: $brand-color
+    width: 3rem
+    height: 3rem
+    margin-right: 2rem
+    
+
+.text-center
+    text-align: center
+
+.meal-btn
+    display: inline-block
+    font-size: 2rem
+    text-decoration: none
+    
+    margin: 4rem auto
+    color: $brand-color
+    border-bottom: 1px solid $brand-color
+    transition: 300ms
+
+.meal-btn:hover
+    border-bottom: 1px solid transparent
+
+
+/*testimonials$$$$$$$$$$$$$$$*/
+
+.testimonials-section 
+    background-color: #fef9f4
+    border-top: 1px solid #eee
+    padding-bottom: 3rem
+
+.subheading-container
+    padding-top: 3rem
+
+.container-tensimonials
+    margin: 0 auto
+    max-width: 1300px
+.testimonials
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: 1fr 1fr 1fr
+    grid-gap: 3rem
+    
+    
+    
+.testimonial
+    width: 100%
+    padding: 0
+    display: block
+    
+    
+
+.testimonial-img
+    
+    height: 10rem
+    border: 1px solid $brand-color
+    border-radius: 50%
+
+.testimonial-name
+    margin: 1rem 0
+    color: #333
+    font-weight: bold
+    font-size: 2rem
+
+.testimonial-text
+    font-size: 1.5rem
+    line-height: 1.2
+    letter-spacing: 1px
+    color: #555
+
+
+.gallery
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 2rem
+    
+.gallery figure
+    
+    overflow: hidden
+   
+
+    
+
+.gallery figure img
+    height: 20rem
+    transition: all 400ms
+    
+.gallery figure img:hover
+    transform: scale(1.1)
+
+
+
+/*pricing*/
+.pricing-container 
+    display: flex
+    justify-content: center
+    gap: 10rem
+    margin-bottom: 10rem
+
+.price 
+    border: 3px solid $brand-color
+    border-radius: 15px
+    overflow: hidden
+    position: relative
+    width: 40rem
+.price ul
+    
+    list-style: none
+    margin: 0 3rem
+    margin-top: 4rem
+    margin-bottom: 10rem
+
+.btn-container
+    text-align: center
+    margin-top: 2rem
+    margin-bottom: 3rem
+
+.price ul li
+    display: flex
+    margin: 0 2rem
+    gap: 1rem
+    align-items: center
+    line-height: 2
+    font-size: 2rem
+    color: #555
+
+.price ul ion-icon
+    
+    color: $brand-color
+    width: 3rem
+    height: 3rem
+    margin-right: 2rem
+    
+.heading-text
+    margin: 3rem 0
+    text-align: center
+    font-size: 2.8rem
+    font-weight: bold
+    line-height: 1.5
+
+.price-number
+    font-size: 5rem
+    text-align: center
+    line-height: 1.2
+
+.price-number sup
+    font-size: 3rem
+
+.subhead-price
+    font-size: 1.8rem
+    text-align: center
+    color: #555
+    line-height: 2
+
+.complete
+    background-color: $main-background-color
+    
+    
+
+.complete:after
+    content: 'Best value'
+    font-size: 1.5rem
+    
+    padding: 1rem 5rem
+    overflow: hidden
+    background-color:#ffd43b
+    position: absolute
+    text-transform: uppercase
+    top: 4%
+    right: -14%
+    transform: rotate(45deg)
+
+
+
+
+
+/*features--------------------*/
+.feature
+    margin-bottom: 10rem
+
+.feature-icon
+    height: 4rem
+    width: 4rem
+    padding: 1rem
+    background-color: $main-background-color
+    border-radius: 50%
+    color: $brand-color
+    margin-bottom: 2rem
+
+.feature-icon:before
+
+
+.feature-text
+    font-size: 2rem
+    color: #555
+    letter-spacing: 0.4px
+    font-weight: lighter
+
+.feature-title
+    font-size: 2.4rem
+    font-weight: bold
+    margin-bottom: 1.5rem
+    color: #333
+
+
+
+
+/*form----------*/
+
+.grid-form
+    padding: 0
+    display: grid
+    margin-bottom: 3rem
+    
+    grid-template-columns: 2fr 1fr
+    background-color: $brand-color
+    border-radius: 15px
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2)
+    
+.form-text-box
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem
+
+.form-img-box
+    border-top-right-radius: 15px
+    border-bottom-right-radius: 15px
+    background-repeat: no-repeat 
+    background-size: cover
+    background-image: linear-gradient( to right bottom, rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35) ), url("../img/eating.jpg")
+
+.form-color
+    margin-bottom: 2rem
+    font-size: 2rem
+    color: #555
+
+.form-subscribe
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 3rem
+    
+.form-item label
+    display: block
+    font-size: 1.6rem
+    font-weight: 500
+    margin-bottom: 1.2rem
+
+.form-item input, .form-item select
+    width: 100%
+    padding: 1.2rem
+    font-size: 1.8rem
+    font-family: inherit
+    color: inherit
+    border: none
+    background-color: #fdf2e9
+    border-radius: 9px
+   
+.btn-form
+    background-color: #8a4c14
+    color: #fdf2e9
+    align-self: end
+    padding: 1rem
+    display: inline-block
+    text-decoration: none
+    font-size: 2rem
+    font-weight: 600
+    border-radius: 15px
+
+.btn-form:hover
+    background-color: #f5cba7
+    color: #555
+
+
+.footer
+  padding: 12.8rem 0
+  border-top: 1px solid #eee
+  
+
+.grid--footer
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr
+  margin-bottom: 5rem
+
+.logo-col
+  display: flex
+  flex-direction: column
+
+.footer-logo
+  display: block
+  margin-bottom: 3.2rem
+
+.social-links
+  list-style: none
+  display: flex
+  gap: 2.4rem
+
+.social-icon
+  height: 2.4rem
+  width: 2.4rem
+
+.copyright
+  font-size: 1.4rem
+  line-height: 1.6
+  color: #767676
+  margin-top: auto
+  text-align: center
+
+.footer-heading
+  font-size: 1.8rem
+  font-weight: 500
+  margin-bottom: 4rem
+
+.contacts
+  font-style: normal
+  font-size: 1.6rem
+  line-height: 1.6
+
+.address
+  margin-bottom: 2.4rem
+
+.footer-nav
+  list-style: none
+  display: flex
+  flex-direction: column
+  gap: 2.4rem
+
+.footer-link
+  &:link, &:visited
+    text-decoration: none
+    font-size: 1.6rem
+    color: #767676
+    transition: all 0.3s
+
+  &:hover, &:active
+    color: #555
+    
