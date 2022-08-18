@@ -1,6 +1,5 @@
 - 👋 Hi, I’m @Buhaev-Yauhenii
 - 👀 I’m interested in web development! =)
-- 🌱 I’m currently learning ML
 - 📫 How to reach me buhaev.yauheni@gmail.com
 
 <!---
