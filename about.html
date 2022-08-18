@@ -26,14 +26,14 @@
     <link href="./main.3f6952e4.css" rel="stylesheet" />
   </head>
 
-  <body class="minimal">
+  <body class="">
     <div id="site-border-left"></div>
     <div id="site-border-right"></div>
     <div id="site-border-top"></div>
     <div id="site-border-bottom"></div>
     <!-- Add your content of header -->
     <header>
-      <nav class="navbar navbar-fixed-top navbar-inverse">
+      <nav class="navbar navbar-fixed-top navbar-default">
         <div class="container">
           <button
             type="button"
@@ -58,28 +58,51 @@
         </div>
       </nav>
     </header>
-    <!-- Add your site or app content here -->
-    <div
-      class="
-        hero-full-container
-        background-image-container
-        white-text-container
-      "
-      style="background-image: url('./assets/images/space.jpg')"
-    >
+
+    <div class="section-container">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <div class="hero-full-wrapper">
-              <div class="text-content">
-                <h1>
-                  Hello,<br />
-                  <span id="typed-strings">
-                    <span>I'm Yauheni Buhayeu</span>
-                    <span>Web developer</span>
-                  </span>
-                  <span id="typed"></span>
-                </h1>
+            <div class="section-container-spacer text-center">
+              <h1 class="h2">: About me :</h1>
+            </div>
+
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                    <h3>About me:</h3>
+                    <p>
+                      Hello! My name is Eugene and I'm young Python developer! I
+                      really enjoy of programming and i moving forward, learning
+                      new and new technologies, such as Redis, docker, React.
+                      And I do not forget about the development of existing
+                      skills, constantly improving my knowledge in the field of
+                      python, Django, expanding my knowledge in the field of
+                      design patterns and OOP Programming inspires me to create
+                      something new and awesome!
+                    </p>
+                    <h3>Technolgies</h3>
+                    <div>
+                      <ul>
+                        <li>Languages: Python, Javascript</li>
+                        <li>Web development: HTML5, CSS3</li>
+                        <li>Design patterns: OOP, MVC</li>
+                        <li>Version control systems: Git, Github</li>
+                        <li>Database Management: SQLite, PostgreSQL</li>
+                        <li>Frameworks: Django</li>
+                        <li>OS: Linux, Unix</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                    <img
+                      src="./assets/images/profil.jpg"
+                      class="img-responsive"
+                      alt=""
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -89,8 +112,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function (event) {
-        type();
-        movingBackgroundImage();
+        navActivePage();
       });
     </script>
 
