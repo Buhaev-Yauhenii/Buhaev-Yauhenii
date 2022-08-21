@@ -67,6 +67,8 @@ class App {
     form.addEventListener("submit", this._newWorkout.bind(this));
 
     inputType.addEventListener("change", this._toggleElevationField);
+
+    containerWorkouts.addEventListener("click", this._moveToMarker.bind(this));
   }
 
   _getPosition() {
@@ -223,6 +225,19 @@ class App {
       `;
     }
     form.insertAdjacentHTML("afterend", html);
+  }
+  _moveToMarker(e) {
+    const targetEl = e.target.closest(".workout");
+
+    if (!targetEl) return;
+
+    const workout = this.#workouts.find((el) => el.id === targetEl.id);
+    this.#map.setView(workout.coords, 13, {
+      animate: true,
+      pan: {
+        duration: 1,
+      },
+    });
   }
 }
 
