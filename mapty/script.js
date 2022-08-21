@@ -231,7 +231,9 @@ class App {
 
     if (!targetEl) return;
 
-    const workout = this.#workouts.find((el) => el.id === targetEl.id);
+    const workout = this.#workoutArr.find((el) => el.id === targetEl.dataset.id);
+    console.log(this.#workoutArr)
+    console.log(workout.id);
     this.#map.setView(workout.coords, 13, {
       animate: true,
       pan: {
