@@ -1,7 +1,0 @@
-
-mapty/.nova/Configuration.json
-.DS_Store
-/recipies/nbproject/private/
-node_modules
-dist
-.cache
