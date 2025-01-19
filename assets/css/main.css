@@ -162,6 +162,15 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
+	@media screen and (max-width: 736px) {
+
+		p {
+			font-size: .5rem;
+
+		}
+
+	}
+
 	h1, h2, h3, h4, h5, h6 {
 		color: #fff;
 		font-weight: 800;
@@ -282,6 +291,15 @@ input, select, textarea {
 
 	.align-right {
 		text-align: right;
+	}
+
+	.logo {
+		height: 10rem;
+	}
+	@media screen and (max-width: 736px) {
+		.logo {
+			height: 3rem;
+		}
 	}
 
 /* Row */
@@ -3806,10 +3824,10 @@ input, select, textarea {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner_main.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner_main.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner_main.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner_main.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
